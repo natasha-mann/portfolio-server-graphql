@@ -2,7 +2,7 @@ const nodeFetcher = require("../fetchers/nodeFetcher");
 
 const repos = async (_, args) => {
   const data = await nodeFetcher(
-    `https://api.github.com/users/natasha-mann/repos`,
+    `https://api.github.com/users/${args.username}/repos`,
     { sort: "updated", per_page: 9, page: 1 }
   );
 
