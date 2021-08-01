@@ -8,10 +8,12 @@ const typeDefs = gql`
     homepage: String
     createdAt: String!
     updatedAt: String!
+    branch: String!
+    size: Int!
   }
 
   type Query {
-    repos(sortBy: String, top: Int): [Repo]
+    repos: [Repo]
   }
 `;
 
