@@ -13,7 +13,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    repos(username: String!): [Repo]
+    repos(username: String!, sortBy: String, number: Int, page: Int): [Repo]
   }
 `;
 

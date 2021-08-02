@@ -3,7 +3,7 @@ const nodeFetcher = require("../fetchers/nodeFetcher");
 const repos = async (_, args) => {
   const data = await nodeFetcher(
     `https://api.github.com/users/${args.username}/repos`,
-    { sort: "updated", per_page: 9, page: 1 }
+    { sort: args.sortBy, per_page: args.number, page: args.page }
   );
 
   return data.map((repo) => {
